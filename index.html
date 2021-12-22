@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="flex.css">
+    <link rel="stylesheet" href="./transform.css">
+</head>
+<body>
+<div class="transform text">
+    <div class="text">
+        <h1 class="title">flex</h1>
+        <div class="flex">
+            <div class="content">1</div>
+            <div class="content">2</div>
+            <div class="content">3</div>
+        </div>
+        <p>flex-grow 会按照比例来分配剩余空间</p>
+        <p>flex-shrink 会按照元素的宽度加权按比例来收缩多出来的空间</p>
+        <div class="flex basis">
+            <div class="content">sdfhkjhaskjhkasasdasdasdsddnaskjdasdasdasd</div>
+            <div class="content">2</div>
+            <div class="content">3</div>
+        </div>
+        <p>只有flex-basis时，flex-basis的值表示元素的最小宽度，会被内容撑开</p>
+        <p>当有width和flex-basis的时候，如果width>= flex-basis时，flex-basis<=元素的宽度<=width, flex-basis
+            >width的时候，flex-basis就表示元素的最小宽度</p>
+    </div>
+    <h1 class="title">transform</h1>
+    <div class='cube-container'>
+        <div class="cube">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+  var cubeContainer = document.getElementsByClassName('cube-container')[0]
+  cubeContainer.onmousemove = function (e) {
+    this.style.perspectiveOrigin = e.clientX + 'px ' + e.clientY + 'px';
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+root, * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  display: inline-block;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-image: url('./background.jpeg');
+  animation: text-transition 30s infinite;
+  background-position: 0 0;
+  transform-origin: center;
+}
+.title {
+  font-size: 60px;
+}
+@keyframes text-transition {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0 100%;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+

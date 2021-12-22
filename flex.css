@@ -1,0 +1,43 @@
+.flex {
+  display: flex;
+  margin: auto;
+  border: 1px solid black;
+  width: 600px;
+  height: 600px;
+}
+
+.content {
+  border: 1px solid black;
+  width: 200px;
+  height: 200px;
+  flex-basis: 150px;
+  box-sizing: border-box;
+  word-break: break-all;
+}
+
+.content:first-of-type {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.content:nth-of-type(2) {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.content:nth-of-type(3) {
+  flex-grow: 1;
+  width: 400px;
+  flex-shrink: 3;
+}
+
+.basis {
+  resize: both;
+}
+
+.basis .content {
+  width: 200px;
+  flex-grow: 1;
+  flex-basis: 0%;
+}
+
